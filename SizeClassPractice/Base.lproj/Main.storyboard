@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="ipad12_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -18,17 +18,23 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Sizes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KK9-Ap-3a7">
-                                <rect key="frame" x="155.5" y="323" width="64" height="21"/>
+                                <rect key="frame" x="480" y="672.5" width="64" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Regular Width" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5MF-Hc-lbT">
+                                <rect key="frame" x="457.5" y="701.5" width="109" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Compact Height" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n2p-2N-hyU">
-                                <rect key="frame" x="270.5" y="148" width="126" height="21"/>
+                                <rect key="frame" x="305" y="167.66666666666666" width="126" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -38,16 +44,21 @@
                         <constraints>
                             <constraint firstItem="KK9-Ap-3a7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1tr-g0-EOt"/>
                             <constraint firstItem="KK9-Ap-3a7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7pC-C7-OJA"/>
+                            <constraint firstItem="5MF-Hc-lbT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7xr-Tg-Gpn"/>
                             <constraint firstItem="n2p-2N-hyU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MuL-yc-Suj"/>
                             <constraint firstItem="KK9-Ap-3a7" firstAttribute="top" secondItem="n2p-2N-hyU" secondAttribute="bottom" constant="8" id="UFT-xC-cJh"/>
+                            <constraint firstItem="5MF-Hc-lbT" firstAttribute="top" secondItem="KK9-Ap-3a7" secondAttribute="bottom" constant="8" id="XOQ-Xk-Vc1"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="5MF-Hc-lbT"/>
                                 <exclude reference="n2p-2N-hyU"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="MuL-yc-Suj"/>
                                 <exclude reference="UFT-xC-cJh"/>
+                                <exclude reference="7xr-Tg-Gpn"/>
+                                <exclude reference="XOQ-Xk-Vc1"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -59,11 +70,20 @@
                                 <include reference="UFT-xC-cJh"/>
                             </mask>
                         </variation>
+                        <variation key="widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="5MF-Hc-lbT"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="7xr-Tg-Gpn"/>
+                                <include reference="XOQ-Xk-Vc1"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="134.48275862068968" y="136.80000000000001"/>
+            <point key="canvasLocation" x="134.00576368876079" y="136.71875"/>
         </scene>
     </scenes>
 </document>
